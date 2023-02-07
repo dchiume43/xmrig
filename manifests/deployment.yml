@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "deezvmixmr2-fe0d"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "deezvmixmr2-fe0d"
+  template:
+    metadata:
+      labels:
+        app: "deezvmixmr2-fe0d"
+    spec:
+      containers:
+        - name: "deezvmixmr2-fe0d"
+          image: "deezcon.azurecr.io/deezvmixmr2"
+          ports:
+          - containerPort: 80
